@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Run My Batch File",
+      "label": "Compile & Run",
       "type": "shell",
       "command": "${workspaceFolder}\\compile_run.bat",
       "group": {
