@@ -1,20 +1,21 @@
 # 💡 Simulasi Gerbang Logika
 
-Sebuah proyek C++ sederhana untuk mensimulasikan berbagai **gerbang logika digital** seperti AND, OR, NOT, XOR, dan lainnya. Proyek ini dibuat sebagai bagian dari mata kuliah **Pemrograman Komputer**.
+Project C++ sederhana tentang **Gerbang Logika**. Project ini merupakan Project Akhir dari Mata Kuliah Praktikum **Pemrograman** semester 2.
 
 ---
 
 ## 🧠 Fitur
 
-- Simulasi gerbang logika dasar (AND, OR, NOT, NAND, NOR, XOR, XNOR)
-- Modularisasi kode menggunakan struktur folder
-- Kompilasi otomatis melalui file `.bat`
-- Eksekusi hasil program langsung dari terminal
+- Simulasi gerbang logika (AND, OR, NOT, NAND, NOR, XOR, XNOR)
+- Kode Program ditulis secara Modular
+- Compile & Run melalui file `compile_run.bat`
+- Execute hasil program langsung dari terminal
 
 ---
 
-## 🗂️ Struktur Folder
+## 🗂️ Struktur
 
+```txt
 📁 root/
 ├── .vscode/ 
 │ └── tasks.json
@@ -27,21 +28,21 @@ Sebuah proyek C++ sederhana untuk mensimulasikan berbagai **gerbang logika digit
 ├── compile_run.bat 
 ├── simulator.exe 
 └── .gitignore
-
+```
 
 ---
 
-## ▶️ Cara Menjalankan
+## ▶️ How To Run
 
 1. **Buka folder project di VS Code.**
-2. Tekan `Ctrl + Shift + B` untuk menjalankan task (pastikan `tasks.json` sudah dikonfigurasi).
+2. Tekan `Ctrl + Shift + B` untuk menjalankan task.
 3. Atau klik dua kali `compile_run.bat` untuk langsung compile dan run.
 
-> Pastikan kamu ter-install compiler C++ seperti `g++` (bawaan MinGW atau WSL).
+> Pastikan sudah ter-install compiler C++ seperti `g++` (bawaan MinGW atau WSL).
 
 ---
 
-## 🛠️ Konfigurasi VS Code
+## 🛠️ Konfigurasi & Build
 
 Contoh `tasks.json` untuk shortcut `Ctrl + Shift + B`:
 
@@ -61,3 +62,4 @@ Contoh `tasks.json` untuk shortcut `Ctrl + Shift + B`:
     }
   ]
 }
+```
