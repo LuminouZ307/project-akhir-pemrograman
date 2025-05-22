@@ -9,10 +9,10 @@ int main() {
     cout << "|            SIMULATOR RANGKAIAN LOGIKA DIGITAL           |\n";
     garis();
 
-    int jumlah = inputJumlah();
-    inputRangkaian(rangkaian, jumlah);
-    prosesRangkaian(rangkaian, jumlah);
-    tampilkanHasil(rangkaian, jumlah);
+    int jumlah = input_jumlah();
+    input_rangkaian(rangkaian, jumlah);
+    proses_rangkaian(rangkaian, jumlah);
+    hasil_rangkaian(rangkaian, jumlah);
 
     return 0;
 }

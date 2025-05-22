@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+#define             INVALID_INPUT           -1
 const int MAX_RANGKAIAN = 10;
 
 struct S_RANGKAIAN {
@@ -23,9 +24,9 @@ int XNOR(int a, int b);
 
 bool is_valid(int x);
 
-int inputJumlah();
-void inputRangkaian(S_RANGKAIAN r[], int jumlah);
-void prosesRangkaian(S_RANGKAIAN r[], int jumlah);
-void tampilkanHasil(S_RANGKAIAN r[], int jumlah);
+int input_jumlah();
+void input_rangkaian(S_RANGKAIAN r[], int jumlah);
+void proses_rangkaian(S_RANGKAIAN r[], int jumlah);
+void hasil_rangkaian(S_RANGKAIAN r[], int jumlah);
 
 #endif

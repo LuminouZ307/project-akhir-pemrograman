@@ -5,19 +5,40 @@
 #include "util.h"
 using namespace std;
 
-int AND(int a, int b) { return a & b; }
-int OR(int a, int b) { return a | b; }
-int NOT(int a) { return !a; }
-int NAND(int a, int b) { return !(a & b); }
-int NOR(int a, int b) { return !(a | b); }
-int XOR(int a, int b) { return a ^ b; }
-int XNOR(int a, int b) { return !(a ^ b); }
+int AND(int a, int b) 
+{ 
+    return a & b; 
+}
+int OR(int a, int b) 
+{ 
+    return a | b; 
+}
+int NOT(int a) 
+{ 
+    return !a; 
+}
+int NAND(int a, int b) 
+{ 
+    return !(a & b); 
+}
+int NOR(int a, int b) 
+{ 
+    return !(a | b); 
+}
+int XOR(int a, int b) 
+{ 
+    return a ^ b; 
+}
+int XNOR(int a, int b) 
+{ 
+    return !(a ^ b); 
+}
 
 bool is_valid(int x) {
     return x == 0 || x == 1;
 }
 
-int inputJumlah() {
+int input_jumlah() {
     int jumlah;
     cout << "Masukkan jumlah rangkaian logika (maks 10): ";
     cin >> jumlah;
@@ -28,7 +49,7 @@ int inputJumlah() {
     return jumlah;
 }
 
-void inputRangkaian(Rangkaian r[], int jumlah) {
+void input_rangkaian(S_RANGKAIAN r[], int jumlah) {
     for (int i = 0; i < jumlah; i++) {
         cout << "\n--- Rangkaian ke-" << (i + 1) << " ---\n";
         cout << "Pilih jenis gerbang (AND, OR, NOT, NAND, NOR, XOR, XNOR): ";
@@ -38,7 +59,7 @@ void inputRangkaian(Rangkaian r[], int jumlah) {
             cout << "Masukkan input A (0 atau 1): ";
             cin >> r[i].inputA;
             if (!is_valid(r[i].inputA)) exit(1);
-            r[i].inputB = -1;
+            r[i].inputB = INVALID_INPUT;
         } else {
             cout << "Masukkan input A (0 atau 1): ";
             cin >> r[i].inputA;
@@ -49,7 +70,7 @@ void inputRangkaian(Rangkaian r[], int jumlah) {
     }
 }
 
-void prosesRangkaian(Rangkaian r[], int jumlah) {
+void proses_rangkaian(S_RANGKAIAN r[], int jumlah) {
     for (int i = 0; i < jumlah; i++) {
         if (r[i].jenis == "AND") r[i].hasil = AND(r[i].inputA, r[i].inputB);
         else if (r[i].jenis == "OR") r[i].hasil = OR(r[i].inputA, r[i].inputB);
@@ -58,11 +79,11 @@ void prosesRangkaian(Rangkaian r[], int jumlah) {
         else if (r[i].jenis == "NOR") r[i].hasil = NOR(r[i].inputA, r[i].inputB);
         else if (r[i].jenis == "XOR") r[i].hasil = XOR(r[i].inputA, r[i].inputB);
         else if (r[i].jenis == "XNOR") r[i].hasil = XNOR(r[i].inputA, r[i].inputB);
-        else r[i].hasil = -1;
+        else r[i].hasil = INVALID_INPUT;
     }
 }
 
-void tampilkanHasil(Rangkaian r[], int jumlah) {
+void hasil_rangkaian(S_RANGKAIAN r[], int jumlah) {
     cout << "\n";
     garis();
     cout << "| No |  GERBANG  | Input A | Input B |      Ekspresi       | Hasil |\n";
@@ -83,6 +104,6 @@ void tampilkanHasil(Rangkaian r[], int jumlah) {
              << r[i].hasil << "   |\n";
     }
     garis();
-    cout << "Simulasi selesai. Terima kasih telah menggunakan program ini!\n";
+    cout << "Simulasi selesai.\n";
     garis();
 }
