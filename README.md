@@ -34,11 +34,23 @@ Project C++ sederhana tentang **Gerbang Logika**. Project ini merupakan Project 
 
 ## ▶️ How To Run
 
-1. **Buka folder project di VS Code.**
-2. Tekan `Ctrl + Shift + B` untuk menjalankan task.
-3. Atau klik dua kali `compile_run.bat` untuk langsung compile dan run.
+### 1. Via VS Code
+- **Buka folder project di VS Code.**
+- Tekan `Ctrl + Shift + B` untuk menjalankan task.
+- Atau klik dua kali `compile_run.bat` untuk langsung compile dan run.
 
 > Pastikan sudah ter-install compiler C++ seperti `g++` (bawaan MinGW atau WSL).
+
+### 2. Via CMD/Terminal
+- Buka terminal (Command Prompt / PowerShell)
+- Jalankan perintah berikut untuk compile:
+```bash
+g++ main.cpp modules/logic.cpp modules/util.cpp -o simulator
+```
+
+### 3. Jalankan Langsung
+Setelah dicompile, akan muncul file simulator.exe
+Cukup klik dua kali untuk menjalankan program
 
 ---
 
